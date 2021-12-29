@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
+    <link rel="stylesheet" href="css/simple-lightbox.css" />
+
     <!-- My CSS-->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -41,11 +43,21 @@
         </div>
         <div class="nav-link">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#achievement">Achievement</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#about"><i class="far fa-address-card"></i> About</a>
+            </li>
+            <li>
+              <a href="#portfolio"><i class="fas fa-code"></i> Portfolio</a>
+            </li>
+            <li>
+              <a href="#achievement"><i class="fas fa-medal"></i> Achievement</a>
+            </li>
+            <li>
+              <a href="#contact"><i class="far fa-envelope"></i> Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -85,10 +97,10 @@
             ></image>
           </svg>
         </div>
-        <div class="text">
+        <div class="text-hero">
           <h1>Ahmad Ammar Bahtiar</h1>
           <p>Informatics engineering student, Pasundan University, Bandung.</p>
-          <a href="#" class="btn btn-github">Github <i class="fab fa-github"></i></a>
+          <a href="https://github.com/ammarbahtiarasli" class="btn btn-github">Github <i class="fab fa-github"></i></a>
         </div>
       </div>
     </section>
@@ -97,7 +109,7 @@
     <!-- about start -->
     <section id="about">
       <div class="container">
-        <div class="text">
+        <div class="text-about">
           <div class="text-right">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo nulla dicta tempora, deserunt esse
@@ -125,26 +137,54 @@
 
     <!-- Achievement -->
     <section id="achievement">
-      <div class="container"></div>
+      <div class="container">
+        <div class="containers">
+          <div class="achievement">
+            <a href="img/sertifikat/1.jpg" class="big"
+              ><img src="img/sertifikat/1.jpg" alt="" title="Sertifikat Codepolitan Kelas Framework Codeigniter"
+            /></a>
+            <a href="img/sertifikat/2.jpg"
+              ><img src="img/sertifikat/2.jpg" alt="" title="Sertifikat FreeCodeCamp Responsive Web Design"
+            /></a>
+            <a href="img/sertifikat/3.jpg"
+              ><img src="img/sertifikat/3.jpg" alt="" title="Sertifikat Kotakode Coding Festival"
+            /></a>
+            <a href="img/sertifikat/4.png"><img src="img/sertifikat/4.png" alt="" title="Sertifikat Progate GIT" /></a>
+            <a href="img/sertifikat/5.jpg"
+              ><img src="img/sertifikat/5.jpg" alt="" title="Sertifikat Progate HTML & CSS"
+            /></a>
+            <a href="img/sertifikat/6.jpg"
+              ><img src="img/sertifikat/6.jpg" alt="" title="Sertifikat seminar STT YBSI Tasikmalaya"
+            /></a>
+            <a href="img/sertifikat/7.jpg"
+              ><img src="img/sertifikat/7.jpg" alt="" title="Sertifikat Prakerin di PT. Satu Visi Indocreative"
+            /></a>
+            <a href="img/sertifikat/8.jpg"
+              ><img src="img/sertifikat/8.jpg" alt="" title="Sertifikat SoloLearn HTML"
+            /></a>
+            <a href="img/sertifikat/9.PNG"
+              ><img src="img/sertifikat/9.PNG" alt="" title="Sertifikat Codepolitan Kelas PHP"
+            /></a>
+            <div class="clear"></div>
+          </div>
+          <br />
+        </div>
+      </div>
     </section>
     <!-- Achievement end -->
 
     <!-- Contact Start -->
     <section id="contact">
       <div class="container">
-        <form action="#">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name.." />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="lastname" placeholder="email@gmail.com" />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Write something.." style="height: 200px"></textarea>
-
+        <form action="POST" data-netlify="true">
+          <label for="name" class="form-label text-white">Name</label>
+          <input type="text" class="form-control" name="name" placeholder="Your name here" required />
+          <label for="email" class="form-label text-white">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="email@example.com" required />
+          <label for="message" class="form-label text-white">Message</label>
+          <textarea class="form-control" name="message" rows="3"></textarea>
           <div data-netlify-recaptcha="true"></div>
-
-          <input type="submit" value="Submit" />
+          <button type="submit" class="btn-submit">Send <i class="fas fa-envelope"></i></button>
         </form>
       </div>
     </section>
@@ -163,5 +203,12 @@
       <h4>213040051 - Ahmad Ammar Bahtiar</h4>
     </section>
     <!-- Footer End -->
+
+    <script src="js/simple-lightbox.js"></script>
+    <script>
+      (function () {
+        var $gallery = new SimpleLightbox(".achievement a", {});
+      })();
+    </script>
   </body>
 </html>
