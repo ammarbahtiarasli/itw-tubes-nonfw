@@ -87,6 +87,7 @@ nav .nav-link ul li a:hover::before {
   align-items: center;
   margin: auto;
 }
+/* End container */
 
 /* Hero start */
 section#hero {
@@ -322,6 +323,7 @@ button[type="submit"]:hover {
 }
 /* Footer End */
 
+/* scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
